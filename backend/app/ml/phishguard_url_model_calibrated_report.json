@@ -1,0 +1,40 @@
+{
+    "dataset": "datasets\\phiusiil\\PhiUSIIL_Phishing_URL_Dataset.csv",
+    "supplemental_dataset": "datasets\\verified_legitimate_urls.csv",
+    "model": "TF-IDF character ngrams + LinearSVC + LogisticRegression calibration",
+    "label_mapping": {
+        "0": "Legitimate",
+        "1": "Phishing"
+    },
+    "model_fit_rows": 156082,
+    "calibration_rows": 32855,
+    "testing_rows": 45320,
+    "model_fit_domains": 112332,
+    "calibration_domains": 28083,
+    "testing_domains": 35104,
+    "fit_calibration_domain_overlap": 0,
+    "training_testing_domain_overlap": 0,
+    "conflicting_urls_removed": 1,
+    "confusion_matrix": [
+        [
+            26934,
+            21
+        ],
+        [
+            634,
+            17731
+        ]
+    ],
+    "metrics": {
+        "accuracy": 0.9855472197705207,
+        "balanced_accuracy": 0.9823493674077299,
+        "precision": 0.9988170347003155,
+        "recall": 0.9654778110536346,
+        "f1_score": 0.9818644959437384,
+        "false_positive_rate": 0.0007790762381747357,
+        "false_negative_rate": 0.03452218894636537,
+        "brier_score": 0.00983322697036195,
+        "log_loss": 0.04668646797835927
+    },
+    "random_state": 42
+}
